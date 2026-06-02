@@ -1,22 +1,20 @@
 import unittest
-from divide import divide
+from multiply import multiply
 
-class TestDivide(unittest.TestCase):
+class TestMultiply(unittest.TestCase):
 
-    def test_divide_positive_numbers(self):
-        self.assertEqual(divide(10, 2), 5)
+    def test_multiply_positive_numbers(self):
+        self.assertEqual(multiply(2, 3), 6)
 
-    def test_divide_decimal_result(self):
-        self.assertEqual(divide(7, 2), 3.5)
+    def test_multiply_negative_numbers(self):
+        self.assertEqual(multiply(-2, -3), 6)   
+        self.assertEqual(multiply(-2, 3), -6)   
 
-    def test_divide_negative_numbers(self):
-        self.assertEqual(divide(-10, 2), -5)
+    def test_multiply_by_zero(self):
+        self.assertEqual(multiply(5, 0), 0)
 
-    def test_divide_by_one(self):
-        self.assertEqual(divide(8, 1), 8)
-    def test_divide_by_zero(self):
+    def test_multiply_decimal_numbers(self):
+        self.assertEqual(multiply(2.5, 2), 5.0)
 
-        with self.assertRaises(ZeroDivisionError):
-            divide(5, 0)
 if __name__ == '__main__':
     unittest.main()
