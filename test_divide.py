@@ -1,5 +1,5 @@
 import pytest
-from calculator import divide
+from divide import divide
 
 
 def test_divide_positive():
